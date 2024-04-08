@@ -612,6 +612,11 @@ class Controllers
                 $controller->useBaseDependenciesService($c->get('ControllerBaseDependenciesService'));
                 return $controller;
             },
+            '\Xibo\Custom\Controller\Store' => function (ContainerInterface $c) {
+                $controller =  new \Xibo\Custom\Controller\Store();
+                $controller->useBaseDependenciesService($c->get('ControllerBaseDependenciesService'));
+                return $controller;
+            }
         ];
     }
 }
