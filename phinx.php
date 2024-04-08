@@ -25,6 +25,14 @@ if (!defined('XIBO')) {
     DEFINE('XIBO', true);
 }
 
+$_SERVER['MYSQL_HOST'] = 'db';
+$_SERVER['MYSQL_USER'] = 'root';
+$_SERVER['MYSQL_PASSWORD'] = 'root';
+$_SERVER['MYSQL_PORT'] = '3306';
+$_SERVER['MYSQL_DATABASE'] = 'cms';
+$_SERVER['MYSQL_ATTR_SSL_CA'] = 'none';
+$_SERVER['MYSQL_ATTR_SSL_VERIFY_SERVER_CERT'] = true;
+
 // Return the PHINX configuration object
 // this should be based on our settings.php file
 // in the case of a Docker installation the settings.php file will contain $_SERVER vars which we can use directly
