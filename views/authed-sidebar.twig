@@ -10,6 +10,12 @@
             <li class="sidebar-list"><a href="{{ url_for("daypart.view") }}">{% trans "Dayparting" %}</a></li>
         {% endif %}
 
+        <li class="sidebar-title"><a>{% trans "Our App" %}</a></li>
+
+        {% if currentUser.featureEnabled("store.view") %}
+            <li class="sidebar-list"><a href="{{ url_for("store.view") }}">{% trans "Store" %}</a></li>
+        {% endif %}
+
         {% set countViewable = currentUser.featureEnabledCount(["campaign.view", "layout.view", "template.view", "resolution.view"]) %}
         {% if countViewable > 0 %}
             <li class="sidebar-title"><a>{% trans "Design" %}</a></li>

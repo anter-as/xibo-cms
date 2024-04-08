@@ -125,6 +125,7 @@ $app->addErrorMiddleware(
     ->setDefaultErrorHandler(\Xibo\Middleware\Handlers::webErrorHandler($container));
 
 // All application routes
+require PROJECT_ROOT . '/custom/routes-custom.php';
 require PROJECT_ROOT . '/lib/routes-web.php';
 require PROJECT_ROOT . '/lib/routes.php';
 
